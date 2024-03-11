@@ -3,6 +3,8 @@ import PIL
  
 import streamlit as st
 from ultralytics import YOLO
+from PIL import Image
+
  
 # Replace the relative path to your weight file
 model_path = 'best_segmentation.pt'
@@ -38,6 +40,8 @@ with col1:
     if source_img:
         # Opening the uploaded image
         uploaded_image = PIL.Image.open(source_img)
+        #Convert to JPEG
+        uploaded_image = uploaded_image.convert('RGB')
         # Adding the uploaded image to the page with a caption
         st.image(source_img,
                  caption="Uploaded Image",
