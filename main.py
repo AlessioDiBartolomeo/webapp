@@ -22,7 +22,7 @@ with st.sidebar:
     st.header("Image Config")     # Adding header to sidebar
     # Adding file uploader to sidebar for selecting images
     source_img = st.file_uploader(
-        "Upload an image...", type=("jpg", "jpeg", "png", 'bmp', 'webp', 'heic', 'image/heic'))
+        "Upload an image...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
  
     # Model Options
     confidence = float(st.slider(
